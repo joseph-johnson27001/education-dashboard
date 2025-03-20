@@ -19,8 +19,24 @@
         </div>
       </div>
 
-      <div class="donut-chart-section">
-        <DonutChart />
+      <div class="donut-chart-container">
+        <div class="stats-section">
+          <div class="weekly-stats">
+            <div class="stats-heading">Weekly Change:</div>
+            <div class="stats-time">{{ weeklyStats.time }}</div>
+            <div class="stats-change">{{ weeklyStats.change }}</div>
+          </div>
+
+          <div class="monthly-stats">
+            <div class="stats-heading">Monthly Change:</div>
+            <div class="stats-time">{{ monthlyStats.time }}</div>
+            <div class="stats-change">{{ monthlyStats.change }}</div>
+          </div>
+        </div>
+
+        <div class="donut-chart-section">
+          <DonutChart />
+        </div>
       </div>
     </div>
 
@@ -87,6 +103,14 @@ export default {
           iconColor: "#ffde21",
         },
       ],
+      weeklyStats: {
+        time: "18hrs 44mins",
+        change: "+6.2%",
+      },
+      monthlyStats: {
+        time: "82hrs 15mins",
+        change: "+12.8%",
+      },
     };
   },
 };
@@ -109,6 +133,50 @@ export default {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
+}
+
+.donut-chart-container {
+  display: flex;
+  gap: 20px;
+}
+
+.stats-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 10px;
+  height: 100%;
+}
+
+.weekly-stats,
+.monthly-stats {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.stats-heading {
+  font-size: 1rem;
+  font-family: "Inter";
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.stats-time {
+  font-size: 18px;
+  font-weight: bold;
+  color: #c1bfd6;
+  margin-bottom: 8px;
+}
+
+.stats-change {
+  font-size: 14px;
+  font-weight: 600;
+  color: #28c76f;
+  background-color: rgba(40, 199, 111, 0.2);
+  padding: 5px 10px;
+  border-radius: 6px;
+  width: 70px;
 }
 
 .donut-chart-section {
