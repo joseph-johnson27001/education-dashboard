@@ -72,7 +72,6 @@ export default {
 .instructor-area {
   font-size: 0.9rem;
   color: #c1bfd6;
-  margin-top: 5px;
 }
 
 .view-button {
