@@ -18,6 +18,10 @@
           />
         </div>
       </div>
+
+      <div class="donut-chart-section">
+        <DonutChart />
+      </div>
     </div>
 
     <div class="main-content">
@@ -35,11 +39,13 @@
 <script>
 import KpiCard from "@/components/KPIs/KpiCard.vue";
 import ProgressChart from "@/components/Charts/ProgressChart.vue";
+import DonutChart from "@/components/Charts/DonutChart.vue";
 
 export default {
   components: {
     KpiCard,
     ProgressChart,
+    DonutChart,
   },
   data() {
     return {
@@ -99,7 +105,19 @@ export default {
   gap: 20px;
 }
 
-.heading-area,
+.heading-area {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.donut-chart-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
 .main-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -123,7 +141,7 @@ export default {
 }
 
 .welcome-heading {
-  padding-top: 20px;
+  padding-top: 10px;
   font-size: 20px;
   color: #fff;
   margin-bottom: 10px;
