@@ -36,7 +36,6 @@ body {
 .content {
   flex: 1;
   padding: 20px;
-  overflow-y: auto;
   max-width: 1450px;
   box-sizing: border-box;
   width: 100%;

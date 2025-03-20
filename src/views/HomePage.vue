@@ -64,7 +64,16 @@
       </div>
     </div>
     <div class="bottom-content">
-      <div class="instructors-area"></div>
+      <div class="instructors-area">
+        <h3>Popular Instructors</h3>
+        <InstructorsCard
+          v-for="(instructor, index) in instructors"
+          :key="index"
+          :profileImage="instructor.profileImage"
+          :instructorName="instructor.name"
+          :area="instructor.area"
+        />
+      </div>
       <div class="assignments-area"></div>
     </div>
   </div>
@@ -75,6 +84,7 @@ import KpiCard from "@/components/KPIs/KpiCard.vue";
 import ProgressChart from "@/components/Charts/ProgressChart.vue";
 import DonutChart from "@/components/Charts/DonutChart.vue";
 import SideBarCard from "@/components/Sidebar/SideBarCard.vue";
+import InstructorsCard from "@/components/Cards/InstructorsCard.vue";
 
 export default {
   components: {
@@ -82,6 +92,7 @@ export default {
     ProgressChart,
     DonutChart,
     SideBarCard,
+    InstructorsCard,
   },
   data() {
     return {
@@ -168,6 +179,23 @@ export default {
         time: "82hrs 15mins",
         change: "+12.8%",
       },
+      instructors: [
+        {
+          profileImage: "https://randomuser.me/api/portraits/men/45.jpg",
+          name: "John Doe",
+          area: "Frontend Development",
+        },
+        {
+          profileImage: "https://randomuser.me/api/portraits/women/12.jpg",
+          name: "Jane Smith",
+          area: "Data Science",
+        },
+        {
+          profileImage: "https://randomuser.me/api/portraits/men/30.jpg",
+          name: "Mark Johnson",
+          area: "Backend Development",
+        },
+      ],
     };
   },
 };
@@ -283,7 +311,7 @@ export default {
   flex-direction: column;
 }
 
-.upcoming-courses h3 {
+h3 {
   font-size: 1rem;
   font-family: "Inter";
   color: #fff;
@@ -294,7 +322,7 @@ export default {
 
 .bottom-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   box-sizing: border-box;
 }
