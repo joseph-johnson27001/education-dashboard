@@ -478,7 +478,7 @@ h3 {
   }
 
   .donut-chart-container {
-    justify-content: space-between;
+    justify-content: space-around;
   }
 
   .stats-section {
