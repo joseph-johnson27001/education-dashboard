@@ -70,20 +70,20 @@
 import KpiCard from "@/components/KPIs/KpiCard.vue";
 import ProgressChart from "@/components/Charts/ProgressChart.vue";
 import DonutChart from "@/components/Charts/DonutChart.vue";
-import SideBarCard from "@/components/Sidebar/SideBarCard.vue"; // Import SidebarCard
+import SideBarCard from "@/components/Sidebar/SideBarCard.vue";
 
 export default {
   components: {
     KpiCard,
     ProgressChart,
     DonutChart,
-    SideBarCard, // Register SidebarCard
+    SideBarCard,
   },
   data() {
     return {
       kpiData: [
         {
-          icon: "far fa-user",
+          icon: "fa fa-laptop",
           label: "Courses Completed",
           value: "12",
           iconColor: "#3498db",
