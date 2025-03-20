@@ -467,4 +467,38 @@ h3 {
   box-sizing: border-box;
   border-radius: 8px;
 }
+
+@media (max-width: 1000px) {
+  .heading-area,
+  .main-content,
+  .bottom-content,
+  .bottom-left-area {
+    grid-template-columns: 1fr;
+  }
+
+  .kpi-area {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .donut-chart-container {
+    justify-content: space-between;
+  }
+
+  .stats-section {
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 600px) {
+  .kpi-area,
+  .donut-chart-container {
+    grid-template-columns: 1fr;
+  }
+  .donut-chart-container {
+    flex-direction: column;
+  }
+}
 </style>
