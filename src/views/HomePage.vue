@@ -63,6 +63,10 @@
         </div>
       </div>
     </div>
+    <div class="bottom-content">
+      <div class="instructors-area"></div>
+      <div class="assignments-area"></div>
+    </div>
   </div>
 </template>
 
@@ -286,5 +290,21 @@ export default {
   margin-left: 10px;
   font-weight: 400;
   margin-bottom: 10px;
+}
+
+.bottom-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.instructors-area,
+.assignments-area {
+  background-color: #2e3348;
+  padding: 20px;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 </style>
