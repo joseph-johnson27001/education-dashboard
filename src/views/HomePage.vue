@@ -49,7 +49,18 @@
       </div>
 
       <div class="sidebar-area">
-        <p>Placeholder for Sidebar Content</p>
+        <div class="upcoming-courses">
+          <h3>Upcoming Courses</h3>
+          <SideBarCard
+            v-for="(course, index) in upcomingCourses"
+            :key="index"
+            :icon="course.icon"
+            :iconColor="course.iconColor"
+            :iconBackgroundColor="course.iconBackgroundColor"
+            :courseTitle="course.title"
+            :startDate="course.startDate"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -59,12 +70,14 @@
 import KpiCard from "@/components/KPIs/KpiCard.vue";
 import ProgressChart from "@/components/Charts/ProgressChart.vue";
 import DonutChart from "@/components/Charts/DonutChart.vue";
+import SideBarCard from "@/components/Sidebar/SideBarCard.vue"; // Import SidebarCard
 
 export default {
   components: {
     KpiCard,
     ProgressChart,
     DonutChart,
+    SideBarCard, // Register SidebarCard
   },
   data() {
     return {
@@ -104,6 +117,43 @@ export default {
           label: "Completed Challenges",
           value: "8",
           iconColor: "#ffde21",
+        },
+      ],
+      upcomingCourses: [
+        {
+          icon: "fas fa-laptop-code",
+          iconColor: "rgba(255, 159, 67, 1)",
+          iconBackgroundColor: "rgba(255, 159, 67, 0.2)",
+          title: "Web Development Basics",
+          startDate: "March 25, 2025",
+        },
+        {
+          icon: "fas fa-database",
+          iconColor: "rgba(46, 204, 113, 1)",
+          iconBackgroundColor: "rgba(46, 204, 113, 0.2)",
+          title: "Data Science Essentials",
+          startDate: "April 1, 2025",
+        },
+        {
+          icon: "fas fa-cloud",
+          iconColor: "rgba(52, 152, 219, 1)",
+          iconBackgroundColor: "rgba(52, 152, 219, 0.2)",
+          title: "Cloud Computing Introduction",
+          startDate: "April 10, 2025",
+        },
+        {
+          icon: "fas fa-paint-brush",
+          iconColor: "rgba(231, 76, 60, 1)",
+          iconBackgroundColor: "rgba(231, 76, 60, 0.2)",
+          title: "Creative Design Principles",
+          startDate: "April 15, 2025",
+        },
+        {
+          icon: "fas fa-chart-line",
+          iconColor: "rgba(241, 196, 15, 1)",
+          iconBackgroundColor: "rgba(241, 196, 15, 0.2)",
+          title: "Business Analytics 101",
+          startDate: "April 20, 2025",
         },
       ],
       weeklyStats: {
@@ -206,16 +256,6 @@ export default {
   padding: 10px;
 }
 
-.sidebar-area {
-  background-color: #2e3348;
-  padding: 2rem;
-  border-radius: 8px;
-  color: #c1bfd6;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .welcome-heading {
   padding-top: 10px;
   font-size: 20px;
@@ -228,5 +268,23 @@ export default {
   color: #c1bfd6;
   margin-bottom: 20px;
   font-weight: 600;
+}
+
+.sidebar-area {
+  background-color: #2e3348;
+  border-radius: 8px;
+  color: #c1bfd6;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.upcoming-courses h3 {
+  font-size: 1rem;
+  font-family: "Inter";
+  color: #fff;
+  margin-left: 10px;
+  font-weight: 400;
+  margin-bottom: 10px;
 }
 </style>
