@@ -12,7 +12,7 @@
             Let's get studying!
           </div>
           <div class="start-next-class-button-container">
-            <button class="next-class-button">Start Next Class</button>
+            <button class="next-class-button">Begin Next Class</button>
           </div>
         </div>
         <div class="kpi-area">
@@ -50,6 +50,7 @@
 
     <div class="main-content">
       <div class="chart-area">
+        <h3>Course Progression</h3>
         <ProgressChart />
       </div>
 
@@ -70,19 +71,21 @@
     </div>
 
     <div class="bottom-content">
-      <div class="instructors-area">
-        <h3>Popular Instructors</h3>
-        <InstructorsCard
-          v-for="(instructor, index) in instructors"
-          :key="index"
-          :profileImage="instructor.profileImage"
-          :instructorName="instructor.name"
-          :area="instructor.area"
-        />
-      </div>
+      <div class="bottom-left-area">
+        <div class="instructors-area">
+          <h3>Popular Instructors</h3>
+          <InstructorsCard
+            v-for="(instructor, index) in instructors"
+            :key="index"
+            :profileImage="instructor.profileImage"
+            :instructorName="instructor.name"
+            :area="instructor.area"
+          />
+        </div>
 
-      <div class="assignments-area">
-        <h3>Upcoming Assignments</h3>
+        <div class="assignments-area">
+          <h3>Upcoming Assignments</h3>
+        </div>
       </div>
 
       <div class="recent-activity-area">
@@ -314,12 +317,16 @@ export default {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 20px;
+  box-sizing: border-box;
 }
 
 .chart-area {
   background-color: #2e3348;
   border-radius: 8px;
-  padding: 10px;
+  color: #c1bfd6;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
 }
 
 .welcome-heading {
@@ -361,7 +368,7 @@ export default {
   font-size: 0.9rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.2s linear;
   margin-bottom: 10px;
 }
 
@@ -382,16 +389,20 @@ h3 {
   font-size: 1rem;
   font-family: "Inter";
   color: #fff;
-  margin-left: 10px;
   font-weight: 400;
   margin-bottom: 10px;
 }
 
 .bottom-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   gap: 20px;
-  box-sizing: border-box;
+}
+
+.bottom-left-area {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
 }
 
 .instructors-area,

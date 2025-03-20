@@ -1,6 +1,5 @@
 <template>
   <div class="progress-chart">
-    <div class="heading">Course Progression</div>
     <apexchart
       type="bar"
       :options="chartOptions"
@@ -112,8 +111,8 @@ export default defineComponent({
     ]);
 
     const allData = [
-      { x: "HTML/CSS", y: 85, fillColor: "#7367f0" },
-      { x: "JavaScript", y: 80, fillColor: "#00bad1" },
+      { x: "HTML/CSS", y: 95, fillColor: "#7367f0" },
+      { x: "JavaScript", y: 85, fillColor: "#00bad1" },
       { x: "React", y: 80, fillColor: "#28c76f" },
       { x: "Node.js", y: 70, fillColor: "#ff4c51" },
       { x: "Python", y: 60, fillColor: "#ff9f43" },
@@ -136,15 +135,9 @@ export default defineComponent({
 
 <style scoped>
 .progress-chart {
-  padding: 10px;
-  margin-left: -10px;
+  padding: 10px 10px 0px 10px;
+  margin-left: -20px;
   margin-bottom: -20px;
-}
-
-.heading {
-  font-size: 1rem;
-  font-family: "Inter";
-  margin-bottom: -10px;
-  margin-left: 10px;
+  margin-top: -30px;
 }
 </style>

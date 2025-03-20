@@ -1,12 +1,12 @@
 <template>
   <div class="recent-activity-card">
+    <div class="activity-body">
+      <div class="activity-title">{{ activity.title }}</div>
+    </div>
     <div class="activity-header">
       <i class="fas fa-check-circle"></i>
       <!-- Icon indicating completed activity -->
       <span class="activity-time">{{ activity.time }}</span>
-    </div>
-    <div class="activity-body">
-      <div class="activity-title">{{ activity.title }}</div>
     </div>
   </div>
 </template>
@@ -48,7 +48,7 @@ export default {
 }
 
 .activity-body {
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .activity-title {
