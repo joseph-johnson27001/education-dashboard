@@ -1,12 +1,16 @@
 <template>
   <div class="donut-chart">
-    <div class="chart-center-text">{{ hoveredLabel }}</div>
+    <div class="chart-center-text">
+      <div>{{ hoveredLabel.name }}</div>
+      <div class="value">{{ hoveredLabel.value }}</div>
+    </div>
     <apexchart
       type="donut"
       :options="chartOptions"
       :series="chartSeries"
       @dataPointMouseEnter="updateHoverText"
       @dataPointMouseLeave="resetHoverText"
+      :height="200"
     />
   </div>
 </template>
@@ -34,7 +38,10 @@ export default defineComponent({
       chartSeries.value.reduce((a, b) => a + b, 0)
     );
 
-    const hoveredLabel = ref(`Study Time: ${totalHours.value} hrs`);
+    const hoveredLabel = ref({
+      name: `Total Study Time`,
+      value: `${totalHours.value} hrs`,
+    });
 
     const chartOptions = ref({
       chart: {
@@ -70,11 +77,17 @@ export default defineComponent({
     });
 
     const updateHoverText = (event, chartContext, { dataPointIndex }) => {
-      hoveredLabel.value = `${labels[dataPointIndex]}: ${chartSeries.value[dataPointIndex]} hrs`;
+      hoveredLabel.value = {
+        name: labels[dataPointIndex],
+        value: `${chartSeries.value[dataPointIndex]} hrs`,
+      };
     };
 
     const resetHoverText = () => {
-      hoveredLabel.value = `Study Time: ${totalHours.value} hrs`;
+      hoveredLabel.value = {
+        name: "Total Study Time",
+        value: `${totalHours.value} hrs`,
+      };
     };
 
     return {
@@ -102,10 +115,16 @@ export default defineComponent({
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-family: "Inter";
   color: #fff;
   font-weight: 600;
-  white-space: nowrap;
+  text-align: center;
+}
+
+.chart-center-text .value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #c1bfd6;
 }
 </style>

@@ -2,7 +2,10 @@
   <div class="home-page">
     <div class="heading-area">
       <div>
-        <div class="welcome-heading">Welcome back, Joanne!</div>
+        <div class="welcome-heading">
+          Welcome back, Joanne!
+          <i class="far fa-solid fa-star"></i>
+        </div>
         <div class="welcome-back-message">
           Keep pushing forward, your next milestone is just around the corner.
           Let's get studying!
@@ -91,7 +94,7 @@ export default {
           iconColor: "#28c76f",
         },
         {
-          icon: "far fa-star",
+          icon: "fa fa-medal",
           label: "Total Achievements",
           value: "5",
           iconColor: "#9b59b6",
@@ -123,6 +126,11 @@ export default {
   gap: 20px;
 }
 
+.fa-star {
+  color: gold;
+  font-size: 1.4rem;
+}
+
 .kpi-area {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -138,6 +146,7 @@ export default {
 .donut-chart-container {
   display: flex;
   gap: 20px;
+  align-items: flex-end;
 }
 
 .stats-section {
