@@ -85,7 +85,6 @@
 
         <div class="assignments-area">
           <h3>Upcoming Assignments</h3>
-          <!-- Import and Use UpcomingAssignmentsCard here -->
           <UpcomingAssignmentsCard
             v-for="(assignment, index) in upcomingAssignments"
             :key="index"
@@ -117,7 +116,6 @@ import DonutChart from "@/components/Charts/DonutChart.vue";
 import SideBarCard from "@/components/Sidebar/SideBarCard.vue";
 import InstructorsCard from "@/components/Cards/InstructorsCard.vue";
 import RecentActivityCard from "@/components/Cards/RecentActivityCard.vue";
-// Import the UpcomingAssignmentsCard component
 import UpcomingAssignmentsCard from "@/components/Cards/UpcomingAssignmentsCard.vue";
 
 export default {
@@ -128,7 +126,6 @@ export default {
     SideBarCard,
     InstructorsCard,
     RecentActivityCard,
-    // Register UpcomingAssignmentsCard
     UpcomingAssignmentsCard,
   },
   data() {
@@ -155,7 +152,7 @@ export default {
         {
           icon: "far fa-calendar-check",
           label: "Upcoming Deadline",
-          value: "March 25, 2025",
+          value: "March 25th",
           iconColor: "#28c76f",
         },
         {
@@ -499,6 +496,14 @@ h3 {
   }
   .donut-chart-container {
     flex-direction: column;
+  }
+  .welcome-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .start-next-class-button-container {
+    margin: auto;
   }
 }
 </style>
