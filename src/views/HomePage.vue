@@ -6,9 +6,14 @@
           Welcome back, Joanne!
           <i class="far fa-solid fa-star"></i>
         </div>
-        <div class="welcome-back-message">
-          Keep pushing forward, your next milestone is just around the corner.
-          Let's get studying!
+        <div class="welcome-container">
+          <div class="welcome-back-message">
+            Keep pushing forward, your next milestone is just around the corner.
+            Let's get studying!
+          </div>
+          <div class="start-next-class-button-container">
+            <button class="next-class-button">Start Next Class</button>
+          </div>
         </div>
         <div class="kpi-area">
           <KpiCard
@@ -321,7 +326,12 @@ export default {
   padding-top: 10px;
   font-size: 20px;
   color: #fff;
-  margin-bottom: 10px;
+}
+
+.welcome-container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
 }
 
 .welcome-back-message {
@@ -329,6 +339,34 @@ export default {
   color: #c1bfd6;
   margin-bottom: 20px;
   font-weight: 600;
+}
+
+.start-next-class-button-container {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.next-class-button {
+  margin-left: auto;
+  font-family: "Inter";
+  background: linear-gradient(
+    270deg,
+    rgba(115, 103, 240, 0.7),
+    rgb(115, 103, 240)
+  );
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-bottom: 10px;
+}
+
+.next-class-button:hover {
+  background-color: #5f4bdb;
 }
 
 .sidebar-area {

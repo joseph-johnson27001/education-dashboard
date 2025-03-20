@@ -78,7 +78,11 @@ export default {
 .view-button {
   margin-left: auto;
   font-family: "Inter";
-  background-color: #6960d7;
+  background: linear-gradient(
+    270deg,
+    rgba(115, 103, 240, 0.7),
+    rgb(115, 103, 240)
+  );
   color: #fff;
   border: none;
   padding: 8px 16px;

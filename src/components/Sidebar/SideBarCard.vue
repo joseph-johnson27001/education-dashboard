@@ -75,8 +75,7 @@ export default {
 }
 
 .course-start-date {
-  font-size: 0.9rem;
   color: #c1bfd6;
-  margin-top: 5px;
+  font-size: 13px;
 }
 </style>

@@ -24,7 +24,7 @@
 
         <div class="profile">
           <img
-            src="https://randomuser.me/api/portraits/women/20.jpg"
+            src="https://randomuser.me/api/portraits/women/28.jpg"
             alt="User"
           />
           <span class="online-indicator"></span>
@@ -47,7 +47,7 @@
 
 .container {
   width: 100%;
-  max-width: 1450px;
+  max-width: 1400px;
   display: flex;
   justify-content: space-between;
   align-items: center;
