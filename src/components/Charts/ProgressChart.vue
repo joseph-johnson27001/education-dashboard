@@ -1,5 +1,6 @@
 <template>
   <div class="progress-chart">
+    <div class="heading">Course Progression</div>
     <apexchart
       type="bar"
       :options="chartOptions"
@@ -32,6 +33,7 @@ export default defineComponent({
           },
         },
       },
+
       grid: {
         show: true,
         borderColor: "#686a80",
@@ -47,6 +49,7 @@ export default defineComponent({
           },
         },
       },
+
       xaxis: {
         categories: [
           "Maths",
@@ -130,3 +133,15 @@ export default defineComponent({
   },
 });
 </script>
+
+<style scoped>
+.progress-chart {
+  padding: 10px;
+}
+
+.heading {
+  font-size: 1rem;
+  font-family: "Inter";
+  margin-bottom: -10px;
+}
+</style>
