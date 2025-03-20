@@ -1,7 +1,7 @@
 <template>
   <nav class="top-nav">
     <div class="container">
-      <div class="logo">EduDashboard</div>
+      <div class="logo">CodeCamp</div>
 
       <div class="right-icons">
         <div class="icon-container">

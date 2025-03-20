@@ -52,12 +52,12 @@ export default defineComponent({
 
       xaxis: {
         categories: [
-          "Maths",
-          "Science",
-          "History",
-          "Geography",
-          "Literature",
-          "Art",
+          "HTML/CSS",
+          "JavaScript",
+          "React",
+          "Node.js",
+          "Python",
+          "Git/GitHub",
         ],
         labels: {
           show: true,
@@ -112,18 +112,18 @@ export default defineComponent({
     ]);
 
     const allData = [
-      { x: "Math", y: 85, fillColor: "#7367f0" },
-      { x: "Science", y: 80, fillColor: "#00bad1" },
-      { x: "History", y: 80, fillColor: "#28c76f" },
-      { x: "Geography", y: 70, fillColor: "#ff4c51" },
-      { x: "Literature", y: 60, fillColor: "#ff9f43" },
-      { x: "Art", y: 50, fillColor: "#7a4c8e" },
+      { x: "HTML/CSS", y: 85, fillColor: "#7367f0" },
+      { x: "JavaScript", y: 80, fillColor: "#00bad1" },
+      { x: "React", y: 80, fillColor: "#28c76f" },
+      { x: "Node.js", y: 70, fillColor: "#ff4c51" },
+      { x: "Python", y: 60, fillColor: "#ff9f43" },
+      { x: "Git/GitHub", y: 50, fillColor: "#7a4c8e" },
     ];
 
     onMounted(() => {
       setTimeout(() => {
         chartSeries.value[0].data = allData;
-      }, 100);
+      }, 200);
     });
 
     return {

@@ -10,7 +10,7 @@
       :series="chartSeries"
       @dataPointMouseEnter="updateHoverText"
       @dataPointMouseLeave="resetHoverText"
-      :height="200"
+      :height="225"
     />
   </div>
 </template>
@@ -26,12 +26,12 @@ export default defineComponent({
   setup() {
     const chartSeries = ref([25, 20, 15, 10, 18, 12]);
     const labels = [
-      "Maths",
-      "Science",
-      "History",
-      "Geography",
-      "Literature",
-      "Art",
+      "HTML/CSS",
+      "JavaScript",
+      "React",
+      "Node.js",
+      "Python",
+      "Git/GitHub",
     ];
 
     const totalHours = computed(() =>
@@ -39,7 +39,7 @@ export default defineComponent({
     );
 
     const hoveredLabel = ref({
-      name: `Total Study Time`,
+      name: `Total Learning Time`,
       value: `${totalHours.value} hrs`,
     });
 
@@ -85,7 +85,7 @@ export default defineComponent({
 
     const resetHoverText = () => {
       hoveredLabel.value = {
-        name: "Total Study Time",
+        name: "Total Learning Time",
         value: `${totalHours.value} hrs`,
       };
     };
