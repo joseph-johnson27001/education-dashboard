@@ -30,13 +30,13 @@
       <div class="donut-chart-container">
         <div class="stats-section">
           <div class="weekly-stats">
-            <div class="stats-heading">Weekly Change:</div>
+            <div class="stats-heading">This Week:</div>
             <div class="stats-time">{{ weeklyStats.time }}</div>
             <div class="stats-change">{{ weeklyStats.change }}</div>
           </div>
 
           <div class="monthly-stats">
-            <div class="stats-heading">Monthly Change:</div>
+            <div class="stats-heading">This Month:</div>
             <div class="stats-time">{{ monthlyStats.time }}</div>
             <div class="stats-change">{{ monthlyStats.change }}</div>
           </div>
@@ -262,7 +262,7 @@ export default {
 .donut-chart-container {
   display: flex;
   gap: 20px;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .stats-section {
