@@ -5,10 +5,16 @@
 
       <div class="right-icons">
         <div class="icon-container">
-          <i class="far fa-calendar-alt"></i>
+          <i class="far fa-chart-bar"></i>
         </div>
         <div class="icon-container">
-          <i class="far fa-chart-bar"></i>
+          <i class="far fa-calendar-alt"></i>
+        </div>
+
+        <div class="icon-container" title="Messages - Open inbox">
+          <i class="far fa-envelope message-icon">
+            <span class="message-dot"></span
+          ></i>
         </div>
         <div class="icon-container notification">
           <i class="far fa-bell notification-icon">
@@ -48,7 +54,6 @@
 .logo {
   font-family: "Unica One", sans-serif;
   font-size: 1.5rem;
-  font-weight: bold;
 }
 
 .right-icons {
@@ -65,6 +70,7 @@
   border-radius: 8px;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  position: relative;
 }
 
 .icon-container:hover {
@@ -89,6 +95,21 @@
   position: absolute;
   top: -2px;
   right: -2px;
+  border: 2px solid #2e3348;
+}
+
+.message-icon {
+  position: relative;
+}
+
+.message-dot {
+  width: 10px;
+  height: 10px;
+  background: skyblue;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -2px;
+  right: -4px;
   border: 2px solid #2e3348;
 }
 
