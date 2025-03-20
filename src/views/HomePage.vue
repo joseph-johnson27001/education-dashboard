@@ -63,6 +63,7 @@
         </div>
       </div>
     </div>
+
     <div class="bottom-content">
       <div class="instructors-area">
         <h3>Popular Instructors</h3>
@@ -74,7 +75,19 @@
           :area="instructor.area"
         />
       </div>
-      <div class="assignments-area"></div>
+
+      <div class="assignments-area">
+        <h3>Upcoming Assignments</h3>
+      </div>
+
+      <div class="recent-activity-area">
+        <h3>Recent Activity</h3>
+        <RecentActivityCard
+          v-for="(activity, index) in recentActivities"
+          :key="index"
+          :activity="activity"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -85,6 +98,7 @@ import ProgressChart from "@/components/Charts/ProgressChart.vue";
 import DonutChart from "@/components/Charts/DonutChart.vue";
 import SideBarCard from "@/components/Sidebar/SideBarCard.vue";
 import InstructorsCard from "@/components/Cards/InstructorsCard.vue";
+import RecentActivityCard from "@/components/Cards/RecentActivityCard.vue";
 
 export default {
   components: {
@@ -93,6 +107,7 @@ export default {
     DonutChart,
     SideBarCard,
     InstructorsCard,
+    RecentActivityCard,
   },
   data() {
     return {
@@ -194,6 +209,20 @@ export default {
           profileImage: "https://randomuser.me/api/portraits/men/30.jpg",
           name: "Mark Johnson",
           area: "Backend Development",
+        },
+      ],
+      recentActivities: [
+        {
+          title: "Completed 'Web Development Basics' course",
+          time: "2 hours ago",
+        },
+        {
+          title: "Started 'Cloud Computing Introduction' course",
+          time: "1 day ago",
+        },
+        {
+          title: "Reviewed 'Data Science Essentials' materials",
+          time: "3 days ago",
         },
       ],
     };
@@ -328,7 +357,8 @@ h3 {
 }
 
 .instructors-area,
-.assignments-area {
+.assignments-area,
+.recent-activity-area {
   background-color: #2e3348;
   padding: 20px;
   gap: 20px;

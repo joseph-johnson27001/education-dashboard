@@ -77,6 +77,7 @@ export default {
 
 .view-button {
   margin-left: auto;
+  font-family: "Inter";
   background-color: #6960d7;
   color: #fff;
   border: none;
@@ -84,10 +85,10 @@ export default {
   font-size: 0.9rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
 .view-button:hover {
-  background-color: #2980b9;
+  background-color: #5f4bdb;
 }
 </style>

@@ -58,11 +58,11 @@ export default defineComponent({
       ],
       dataLabels: { enabled: false },
       tooltip: {
-        theme: "dark",
-        y: {
-          formatter: (val, { seriesIndex }) =>
-            `${labels[seriesIndex]}: ${val} hrs`,
-        },
+        enabled: false,
+        // theme: "dark",
+        // y: {
+        //   formatter: (val) => `${val} hrs`,
+        // },
       },
       legend: { show: false },
       plotOptions: {
