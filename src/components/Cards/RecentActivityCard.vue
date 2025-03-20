@@ -26,7 +26,7 @@ export default {
 .recent-activity-card {
   background-color: #2e3348;
   border-radius: 8px;
-  padding: 15px;
+  padding: 10px;
   color: #fff;
 }
 

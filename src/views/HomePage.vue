@@ -85,6 +85,16 @@
 
         <div class="assignments-area">
           <h3>Upcoming Assignments</h3>
+          <!-- Import and Use UpcomingAssignmentsCard here -->
+          <UpcomingAssignmentsCard
+            v-for="(assignment, index) in upcomingAssignments"
+            :key="index"
+            :assignmentTitle="assignment.title"
+            :dueDate="assignment.dueDate"
+            :iconColor="assignment.iconColor"
+            :icon="assignment.icon"
+            :iconBackgroundColor="assignment.iconBackgroundColor"
+          />
         </div>
       </div>
 
@@ -107,6 +117,8 @@ import DonutChart from "@/components/Charts/DonutChart.vue";
 import SideBarCard from "@/components/Sidebar/SideBarCard.vue";
 import InstructorsCard from "@/components/Cards/InstructorsCard.vue";
 import RecentActivityCard from "@/components/Cards/RecentActivityCard.vue";
+// Import the UpcomingAssignmentsCard component
+import UpcomingAssignmentsCard from "@/components/Cards/UpcomingAssignmentsCard.vue";
 
 export default {
   components: {
@@ -116,6 +128,8 @@ export default {
     SideBarCard,
     InstructorsCard,
     RecentActivityCard,
+    // Register UpcomingAssignmentsCard
+    UpcomingAssignmentsCard,
   },
   data() {
     return {
@@ -194,6 +208,36 @@ export default {
           startDate: "April 20, 2025",
         },
       ],
+      upcomingAssignments: [
+        {
+          title: "JavaScript Assignment",
+          dueDate: "March 27, 2025",
+          icon: "fas fa-code",
+          iconColor: "rgba(52, 152, 219, 1)",
+          iconBackgroundColor: "rgba(52, 152, 219, 0.2)",
+        },
+        {
+          title: "Database Project",
+          dueDate: "April 5, 2025",
+          icon: "fas fa-database",
+          iconColor: "rgba(46, 204, 113, 1)",
+          iconBackgroundColor: "rgba(46, 204, 113, 0.2)",
+        },
+        {
+          title: "Cloud Computing Lab",
+          dueDate: "April 12, 2025",
+          icon: "fas fa-cloud",
+          iconColor: "rgba(241, 196, 15, 1)",
+          iconBackgroundColor: "rgba(241, 196, 15, 0.2)",
+        },
+        {
+          title: "React Native Mobile App",
+          dueDate: "April 18, 2025",
+          icon: "fas fa-mobile-alt",
+          iconColor: "rgba(231, 76, 60, 1)",
+          iconBackgroundColor: "rgba(231, 76, 60, 0.2)",
+        },
+      ],
       weeklyStats: {
         time: "18hrs 44mins",
         change: "+6.2%",
@@ -218,6 +262,11 @@ export default {
           name: "Mark Johnson",
           area: "Backend Development",
         },
+        {
+          profileImage: "https://randomuser.me/api/portraits/women/30.jpg",
+          name: "Betty Adams",
+          area: "Database Management",
+        },
       ],
       recentActivities: [
         {
@@ -231,6 +280,10 @@ export default {
         {
           title: "Reviewed 'Data Science Essentials' materials",
           time: "3 days ago",
+        },
+        {
+          title: "Completed 'Cloud Computing Lab' assignment",
+          time: "5 days ago",
         },
       ],
     };
