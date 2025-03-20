@@ -37,7 +37,7 @@ body {
   flex: 1;
   padding: 20px;
   overflow-y: auto;
-  max-width: 1400px;
+  max-width: 1500px;
   box-sizing: border-box;
   width: 100%;
   margin: 0 auto;

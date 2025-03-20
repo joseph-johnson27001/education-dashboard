@@ -47,7 +47,7 @@
 
 .container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
   display: flex;
   justify-content: space-between;
   align-items: center;
