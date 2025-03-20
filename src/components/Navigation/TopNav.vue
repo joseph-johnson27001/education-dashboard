@@ -23,7 +23,10 @@
         </div>
 
         <div class="profile">
-          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="User" />
+          <img
+            src="https://randomuser.me/api/portraits/women/20.jpg"
+            alt="User"
+          />
           <span class="online-indicator"></span>
         </div>
       </div>
