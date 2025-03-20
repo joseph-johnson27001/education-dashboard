@@ -8,7 +8,7 @@
           <i class="far fa-chart-bar"></i>
         </div>
         <div class="icon-container">
-          <i class="far fa-calendar-alt"></i>
+          <i class="far fa-calendar"></i>
         </div>
 
         <div class="icon-container" title="Messages - Open inbox">
@@ -51,7 +51,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 20px;
 }
 
 .logo {

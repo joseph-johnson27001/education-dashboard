@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, onMounted } from "vue";
 import VueApexCharts from "vue3-apexcharts";
 
 export default defineComponent({
@@ -22,6 +22,14 @@ export default defineComponent({
       chart: {
         toolbar: {
           show: false,
+        },
+        animations: {
+          enabled: true,
+          easing: "linear",
+          dynamicAnimation: {
+            enabled: true,
+            speed: 750,
+          },
         },
       },
       grid: {
@@ -49,12 +57,16 @@ export default defineComponent({
           "Art",
         ],
         labels: {
+          show: true,
           style: {
             colors: "#c1bfd6",
+            fontSize: "12px",
+            fontFamily: "Assistant",
           },
         },
       },
       yaxis: {
+        max: 100,
         labels: {
           show: false,
         },
@@ -92,16 +104,24 @@ export default defineComponent({
     const chartSeries = ref([
       {
         name: "Progress",
-        data: [
-          { x: "Math", y: 75, fillColor: "#7367f0" },
-          { x: "Science", y: 80, fillColor: "#00bad1" },
-          { x: "History", y: 65, fillColor: "#28c76f" },
-          { x: "Geography", y: 55, fillColor: "#ff4c51" },
-          { x: "Literature", y: 90, fillColor: "#ff9f43" },
-          { x: "Art", y: 60, fillColor: "#7a4c8e" },
-        ],
+        data: [],
       },
     ]);
+
+    const allData = [
+      { x: "Math", y: 85, fillColor: "#7367f0" },
+      { x: "Science", y: 80, fillColor: "#00bad1" },
+      { x: "History", y: 80, fillColor: "#28c76f" },
+      { x: "Geography", y: 70, fillColor: "#ff4c51" },
+      { x: "Literature", y: 60, fillColor: "#ff9f43" },
+      { x: "Art", y: 50, fillColor: "#7a4c8e" },
+    ];
+
+    onMounted(() => {
+      setTimeout(() => {
+        chartSeries.value[0].data = allData;
+      }, 100);
+    });
 
     return {
       chartOptions,
