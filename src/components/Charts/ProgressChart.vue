@@ -25,8 +25,8 @@ export default defineComponent({
         toolbar: {
           show: false,
         },
+        borderWidth: 0,
       },
-
       grid: {
         show: true,
         borderColor: "#686a80",
@@ -59,26 +59,13 @@ export default defineComponent({
       },
       yaxis: {
         labels: {
-          style: {
-            colors: "#c1bfd6",
-          },
+          show: false,
         },
       },
       plotOptions: {
         bar: {
-          horizontal: true, // Make the bar chart horizontal
+          horizontal: true,
         },
-      },
-      fill: {
-        colors: [
-          "#00c1d4",
-          "#4d89e2",
-          "#f96c50",
-          "#f1b233",
-          "#5ab76d",
-          "#b278e6",
-        ],
-        opacity: 0.9,
       },
       dataLabels: {
         enabled: true,
@@ -89,8 +76,7 @@ export default defineComponent({
           colors: ["#fff"],
         },
         formatter: function (val, opts) {
-          // Returning the name of the area instead of the value
-          return opts.w.globals.labels[opts.seriesIndex];
+          return opts.w.globals.labels[opts.dataPointIndex];
         },
       },
       tooltip: {
@@ -107,7 +93,14 @@ export default defineComponent({
     const chartSeries = ref([
       {
         name: "Progress",
-        data: [75, 80, 65, 55, 90, 60], // Progress data for each category
+        data: [
+          { x: "Math", y: 75, fillColor: "#7367f0" },
+          { x: "Science", y: 80, fillColor: "#00bad1" },
+          { x: "History", y: 65, fillColor: "#28c76f" },
+          { x: "Geography", y: 55, fillColor: "#ff4c51" },
+          { x: "Literature", y: 90, fillColor: "#ff9f43" },
+          { x: "Art", y: 60, fillColor: "#7a4c8e" },
+        ],
       },
     ]);
 
@@ -118,9 +111,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style scoped>
-.progress-chart {
-  margin-top: 2rem;
-}
-</style>
