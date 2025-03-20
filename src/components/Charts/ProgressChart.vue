@@ -26,10 +26,10 @@ export default defineComponent({
         },
         animations: {
           enabled: true,
-          easing: "linear",
+          easing: "easeinout",
           dynamicAnimation: {
             enabled: true,
-            speed: 750,
+            speed: 600,
           },
         },
       },

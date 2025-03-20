@@ -1,18 +1,25 @@
 <template>
   <div class="home-page">
     <div class="heading-area">
-      <div class="kpi-area">
-        <KpiCard
-          v-for="(kpi, index) in kpiData"
-          :key="index"
-          :icon="kpi.icon"
-          :label="kpi.label"
-          :value="kpi.value"
-        />
+      <div>
+        <div class="welcome-heading">Welcome back, Joanne!</div>
+        <div class="welcome-back-message">
+          Keep pushing forward, your next milestone is just around the corner.
+          Let's get studying!
+        </div>
+        <div class="kpi-area">
+          <KpiCard
+            v-for="(kpi, index) in kpiData"
+            :key="index"
+            :icon="kpi.icon"
+            :label="kpi.label"
+            :value="kpi.value"
+            :iconColor="kpi.iconColor"
+          />
+        </div>
       </div>
     </div>
 
-    <!-- Main Content Area (Graph + Sidebar) -->
     <div class="main-content">
       <div class="chart-area">
         <ProgressChart />
@@ -38,20 +45,40 @@ export default {
     return {
       kpiData: [
         {
-          icon: "fas fa-graduation-cap",
+          icon: "far fa-user",
           label: "Courses Completed",
           value: "12",
+          iconColor: "#3498db",
         },
-        { icon: "fas fa-clock", label: "Time Studied", value: "120 hrs" },
+        {
+          icon: "far fa-clock",
+          label: "Time Studied",
+          value: "120 hrs",
+          iconColor: "#00bcd4",
+        },
         {
           icon: "far fa-chart-bar",
           label: "Average Course Score",
           value: "85%",
+          iconColor: "#ff9f43",
         },
         {
-          icon: "far fa-calendar",
-          label: "Next Course Deadline",
+          icon: "far fa-calendar-check",
+          label: "Upcoming Deadline",
           value: "March 25, 2025",
+          iconColor: "#28c76f",
+        },
+        {
+          icon: "far fa-star",
+          label: "Total Achievements",
+          value: "5",
+          iconColor: "#9b59b6",
+        },
+        {
+          icon: "far fa-lightbulb",
+          label: "Completed Challenges",
+          value: "8",
+          iconColor: "#ffde21",
         },
       ],
     };
@@ -68,7 +95,7 @@ export default {
 
 .kpi-area {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
 
@@ -93,5 +120,19 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.welcome-heading {
+  padding-top: 20px;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.welcome-back-message {
+  font-size: 14px;
+  color: #c1bfd6;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div class="kpi-card">
     <div class="icon-container">
-      <i :class="icon"></i>
+      <i :class="icon" :style="{ color: iconColor }"></i>
     </div>
     <div class="info">
       <div class="label">{{ label }}</div>
@@ -25,6 +25,10 @@ export default {
       type: String,
       required: true,
     },
+    iconColor: {
+      type: String,
+      default: "#ff9f43",
+    },
   },
 };
 </script>
@@ -44,11 +48,12 @@ export default {
   display: flex;
   margin-right: 10px;
   width: 30px;
+  height: 30px;
+  align-items: center;
 }
 
 .icon-container i {
-  font-size: 1.4rem;
-  color: #c1bfd6;
+  font-size: 1.6rem;
   transition: color 0.3s ease;
 }
 
@@ -59,8 +64,9 @@ export default {
 }
 
 .label {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #c1bfd6;
+  margin-bottom: 5px;
 }
 
 .value {
