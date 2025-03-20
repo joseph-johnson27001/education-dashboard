@@ -13,7 +13,6 @@ import HomePage from "@/views/HomePage.vue";
 </script>
 
 <style>
-/* Global Reset */
 * {
   margin: 0;
   padding: 0;
@@ -31,11 +30,16 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  align-items: center;
 }
 
 .content {
   flex: 1;
   padding: 2rem;
   overflow-y: auto;
+  max-width: 1400px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
 }
 </style>
