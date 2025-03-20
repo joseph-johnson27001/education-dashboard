@@ -21,11 +21,9 @@ export default defineComponent({
     const chartOptions = ref({
       chart: {
         type: "bar",
-        height: "350",
         toolbar: {
           show: false,
         },
-        borderWidth: 0,
       },
       grid: {
         show: true,
@@ -44,7 +42,7 @@ export default defineComponent({
       },
       xaxis: {
         categories: [
-          "Math",
+          "Maths",
           "Science",
           "History",
           "Geography",
@@ -65,6 +63,8 @@ export default defineComponent({
       plotOptions: {
         bar: {
           horizontal: true,
+          borderRadius: 8,
+          borderRadiusApplication: "end",
         },
       },
       dataLabels: {
@@ -72,7 +72,7 @@ export default defineComponent({
         textAnchor: "middle",
         style: {
           fontSize: "14px",
-          fontWeight: "bold",
+          fontFamily: "Assistant",
           colors: ["#fff"],
         },
         formatter: function (val, opts) {
