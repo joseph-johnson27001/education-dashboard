@@ -1,0 +1,120 @@
+<template>
+  <nav class="top-nav">
+    <div class="container">
+      <div class="logo">EduDashboard</div>
+
+      <div class="right-icons">
+        <div class="icon-container">
+          <i class="far fa-calendar-alt"></i>
+        </div>
+        <div class="icon-container">
+          <i class="far fa-chart-bar"></i>
+        </div>
+        <div class="icon-container notification">
+          <i class="far fa-bell notification-icon">
+            <span class="notification-dot"></span>
+          </i>
+        </div>
+
+        <div class="profile">
+          <img src="https://randomuser.me/api/portraits/men/4.jpg" alt="User" />
+          <span class="online-indicator"></span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</template>
+
+<style scoped>
+.top-nav {
+  background-color: #2e3348;
+  color: #c1bfd6;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(193, 191, 214, 0.5);
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-family: "Unica One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.icon-container:hover {
+  background-color: rgba(193, 191, 214, 0.2);
+}
+
+.right-icons i {
+  font-size: 1.2rem;
+  color: #c1bfd6;
+  transition: color 0.3s ease;
+}
+
+.notification-icon {
+  position: relative;
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff4c51;
+  border-radius: 50%;
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  border: 2px solid #2e3348;
+}
+
+.profile {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.online-indicator {
+  width: 11px;
+  height: 11px;
+  background: #28c76f;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  border: 2px solid #2e3348;
+}
+</style>
