@@ -53,7 +53,6 @@ export default {
 
 .chart-area {
   background-color: #2e3348;
-  padding: 2rem;
   border-radius: 8px;
 }
 

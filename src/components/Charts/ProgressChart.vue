@@ -20,7 +20,6 @@ export default defineComponent({
   setup() {
     const chartOptions = ref({
       chart: {
-        type: "bar",
         toolbar: {
           show: false,
         },
@@ -28,7 +27,7 @@ export default defineComponent({
       grid: {
         show: true,
         borderColor: "#686a80",
-        strokeDashArray: 5,
+        strokeDashArray: 10,
         xaxis: {
           lines: {
             show: true,
