@@ -172,8 +172,7 @@ export default {
 }
 
 .stats-time {
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
   color: #c1bfd6;
   margin-bottom: 8px;
 }

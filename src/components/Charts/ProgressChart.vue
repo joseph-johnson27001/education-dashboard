@@ -137,11 +137,14 @@ export default defineComponent({
 <style scoped>
 .progress-chart {
   padding: 10px;
+  margin-left: -10px;
+  margin-bottom: -20px;
 }
 
 .heading {
   font-size: 1rem;
   font-family: "Inter";
   margin-bottom: -10px;
+  margin-left: 10px;
 }
 </style>
