@@ -56,7 +56,7 @@
 
 .logo {
   font-family: "Unica One", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
 }
 
 .right-icons {
