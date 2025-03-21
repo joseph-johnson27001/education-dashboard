@@ -35,7 +35,7 @@ body {
 
 .content {
   flex: 1;
-  padding: 10px 20px;
+  padding: 10px 20px 20px 20px;
   max-width: 1400px;
   box-sizing: border-box;
   width: 100%;
