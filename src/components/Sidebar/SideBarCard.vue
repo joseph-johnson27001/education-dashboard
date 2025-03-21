@@ -78,4 +78,11 @@ export default {
   color: #c1bfd6;
   font-size: 13px;
 }
+
+@media (max-width: 400px) {
+  .sidebar-card {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
 </style>

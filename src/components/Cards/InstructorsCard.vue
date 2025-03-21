@@ -94,4 +94,17 @@ export default {
 .view-button:hover {
   background-color: #5f4bdb;
 }
+
+@media (max-width: 400px) {
+  .instructor-card {
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .view-button {
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: 5px;
+    width: 100%;
+  }
+}
 </style>
