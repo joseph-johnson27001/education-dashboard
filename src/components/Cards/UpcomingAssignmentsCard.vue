@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar-card">
+  <div class="assignment-card">
     <div
       class="icon-container"
       :style="{ backgroundColor: iconBackgroundColor }"
@@ -41,13 +41,18 @@ export default {
 </script>
 
 <style scoped>
-.sidebar-card {
+.assignment-card {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 10px;
   border-radius: 8px;
   color: #fff;
+}
+
+.assignment-card:hover {
+  cursor: pointer;
+  background-color: rgba(193, 191, 214, 0.2);
 }
 
 .icon-container {

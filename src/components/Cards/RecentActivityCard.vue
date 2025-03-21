@@ -30,6 +30,11 @@ export default {
   color: #fff;
 }
 
+.recent-activity-card:hover {
+  cursor: pointer;
+  background-color: rgba(193, 191, 214, 0.2);
+}
+
 .activity-header {
   display: flex;
   align-items: center;
