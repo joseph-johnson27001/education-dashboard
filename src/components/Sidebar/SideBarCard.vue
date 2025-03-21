@@ -50,6 +50,11 @@ export default {
   color: #fff;
 }
 
+.sidebar-card:hover {
+  cursor: pointer;
+  background-color: rgba(193, 191, 214, 0.2);
+}
+
 .icon-container {
   width: 40px;
   height: 40px;
