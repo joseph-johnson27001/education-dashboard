@@ -377,6 +377,13 @@ export default {
   display: flex;
   padding: 20px;
   flex-direction: column;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chart-area ::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
 }
 
 .welcome-heading {

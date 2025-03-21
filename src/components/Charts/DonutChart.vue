@@ -127,4 +127,10 @@ export default defineComponent({
   font-weight: 500;
   color: #c1bfd6;
 }
+
+@media (max-width: 300px) {
+  .donut-chart {
+    display: none;
+  }
+}
 </style>
