@@ -13,8 +13,8 @@
 
         <div class="icon-container" title="Messages - Open inbox">
           <i class="far fa-envelope message-icon">
-            <span class="message-dot"></span
-          ></i>
+            <span class="message-dot"></span>
+          </i>
         </div>
         <div class="icon-container notification">
           <i class="far fa-bell notification-icon">
@@ -29,6 +29,10 @@
           />
           <span class="online-indicator"></span>
         </div>
+      </div>
+
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
       </div>
     </div>
   </nav>
@@ -64,7 +68,8 @@
   align-items: center;
 }
 
-.icon-container {
+.icon-container,
+.menu-icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,11 +81,13 @@
   position: relative;
 }
 
-.icon-container:hover {
+.icon-container:hover,
+.menu-icon:hover {
   background-color: rgba(193, 191, 214, 0.2);
 }
 
-.right-icons i {
+.right-icons i,
+.menu-icon i {
   font-size: 1.2rem;
   color: #c1bfd6;
   transition: color 0.3s ease;
@@ -140,5 +147,19 @@
   bottom: 0px;
   right: 0px;
   border: 2px solid #2e3348;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .right-icons {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
 }
 </style>
