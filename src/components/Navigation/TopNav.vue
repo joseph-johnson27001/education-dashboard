@@ -161,4 +161,10 @@
     display: flex;
   }
 }
+
+@media (max-width: 280px) {
+  .icon-container {
+    display: none;
+  }
+}
 </style>
