@@ -2,6 +2,9 @@
   <nav class="top-nav">
     <div class="container">
       <div class="logo">CodeCamp</div>
+      <div class="menu-icon">
+        <i class="fas fa-bars"></i>
+      </div>
 
       <div class="right-icons">
         <div class="icon-container">
@@ -29,10 +32,6 @@
           />
           <span class="online-indicator"></span>
         </div>
-      </div>
-
-      <div class="menu-icon">
-        <i class="fas fa-bars"></i>
       </div>
     </div>
   </nav>
@@ -154,7 +153,7 @@
 }
 
 @media (max-width: 400px) {
-  .right-icons {
+  .logo {
     display: none;
   }
 
