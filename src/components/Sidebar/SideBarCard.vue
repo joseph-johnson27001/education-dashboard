@@ -84,7 +84,7 @@ export default {
   font-size: 13px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 250px) {
   .sidebar-card {
     flex-direction: column;
     align-items: baseline;

@@ -97,13 +97,12 @@ export default {
 
 @media (max-width: 400px) {
   .instructor-card {
-    flex-direction: column;
-    align-items: baseline;
+    flex-wrap: wrap;
   }
   .view-button {
     margin-right: auto;
     margin-left: 0;
-    margin-top: 5px;
+    margin-top: 10px;
     width: 100%;
   }
 }
