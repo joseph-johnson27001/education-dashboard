@@ -426,6 +426,7 @@ export default {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.2s linear;
+  margin-left: 10px;
   margin-bottom: 10px;
 }
 
@@ -510,7 +511,20 @@ h3 {
     align-items: center;
   }
   .start-next-class-button-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-left: 0;
+  }
+  button {
     margin: auto;
+    width: 100%;
+    max-width: 500px;
+  }
+  .next-class-button {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 </style>
