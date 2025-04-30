@@ -498,7 +498,6 @@ h3 {
 }
 
 @media (max-width: 600px) {
-  .kpi-area,
   .donut-chart-container {
     grid-template-columns: 1fr;
   }
@@ -525,6 +524,12 @@ h3 {
   .next-class-button {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 420px) {
+  .kpi-area {
+    grid-template-columns: 1fr;
   }
 }
 </style>
