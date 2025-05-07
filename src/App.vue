@@ -4,12 +4,14 @@
     <main class="content">
       <HomePage />
     </main>
+    <DashboardButton />
   </div>
 </template>
 
 <script setup>
 import TopNav from "@/components/Navigation/TopNav.vue";
 import HomePage from "@/views/HomePage.vue";
+import DashboardButton from "./components/UI/DashboardButton.vue";
 </script>
 
 <style>
